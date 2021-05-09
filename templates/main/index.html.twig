@@ -23,40 +23,40 @@
         {% endblock %}
     </head>
     <body>
-    <header class="d-flex header-nav-cha" >
-        <a href="{{path('accueil')}}"><img class="logo-cha"src="{{asset('uploads/images/favicon.svg')}}"></a>
-        <bouton data-target="example-sidenav" class="btn outline rounded-1 opening sidenav-trigger text-cha"><span class="outline-text">menu</span></bouton>
-    </header>
+        <header class="d-flex header-nav-cha" >
+            <a href="{{path('accueil')}}"><img class="logo-cha"src="{{asset('uploads/images/favicon.svg')}}"></a>
+            <bouton data-target="example-sidenav" class="btn outline rounded-1 opening sidenav-trigger text-cha"><span class="outline-text">menu</span></bouton>
+        </header>
 
-    <div class="sidenav shadow-1 " id="example-sidenav" data-ax="sidenav">
-        <div class="sidenav-header">
-            <button data-target="example-sidenav" class="sidenav-trigger"><i class="fas fa-times"></i></button>
-            <a href="{{path('accueil')}}"><img class="sidenav-logo dropshadow-1" src="{{asset('uploads/images/favicon.svg')}}" alt="Logo" /></a>
-        </div>
-        <div class="deco"></div>
+        <div class="sidenav shadow-1 " id="example-sidenav" data-ax="sidenav">
+            <div class="sidenav-header">
+                <button data-target="example-sidenav" class="sidenav-trigger"><i class="fas fa-times"></i></button>
+                <a href="{{path('accueil')}}"><img class="sidenav-logo dropshadow-1" src="{{asset('uploads/images/favicon.svg')}}" alt="Logo" /></a>
+            </div>
+            <div class="deco"></div>
 
-        <div class="container-lien">
-        <a href="{{path('stage')}}" class="sidenav-link">Stage</a>
-        <a href="{{path('autres')}}" class="sidenav-link">Autres projets</a>
-        <a href="{{path('about')}}"  class="sidenav-link">A propos</a>
-        <a href="{{path('contact')}}" class="sidenav-link">Contact</a>
-        {% if  is_granted('ROLE_ADMIN') %}
-        <a href="{{path('admin')}}" class="sidenav-link">Admin</a>
-        {% endif %}
+            <div class="container-lien">
+                <a href="{{path('stage')}}" class="sidenav-link">Stage</a>
+                <a href="{{path('autres')}}" class="sidenav-link">Autres projets</a>
+                <a href="{{path('about')}}"  class="sidenav-link">A propos</a>
+                <a href="{{path('contact')}}" class="sidenav-link">Contact</a>
+                {% if  is_granted('ROLE_ADMIN') %}
+                <a href="{{path('admin')}}" class="sidenav-link">Admin</a>
+                {% endif %}
+            </div>
+            <div class="sidenav-footer light-1 deco"></div>
         </div>
-        <div class="sidenav-footer light-1 deco"></div>
-    </div>
 
       
        
         {% block body %}{% endblock %}
 
-         </main>
+        <footer class="footer-site"><p> Charline Royer 2021 <p></footer>
+
         <script src="https://cdn.jsdelivr.net/npm/axentix@1.2.1/dist/js/axentix.min.js"></script>
         <script>
-        let exampleSidenav = new Axentix.Sidenav('#example-sidenav');
-        
+            let exampleSidenav = new Axentix.Sidenav('#example-sidenav');
         </script>
     </body>
-    <footer class="footer-site"><p> Charline Royer 2021 <p></footer>
+  
 </html>
