@@ -1,0 +1,11 @@
+{% extends 'admin/index.html.twig' %}
+
+{% block title %}Modifier un utilisateur{% endblock %}
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{asset('css/ajout-article.css')}}">
+{% endblock %}
+
+{% block body %}
+<h1>Modifier l'utilisateur</h1>
+{{ form(form) }}
+{% endblock %}

@@ -1,0 +1,49 @@
+h1{
+    text-align: center;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+h2{
+    margin-bottom: 1em;
+}
+
+.container-images{
+    margin-bottom: 2em;
+}
+input[type='text']{
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 2em;
+}
+
+input[type='file']{
+    margin-bottom: 2em;
+}
+
+#cke_articles_content, #cke_articles_description{
+    margin-bottom: 2em;
+}
+
+select{
+    margin-left: 1em;
+    margin-bottom: 2em;
+    width: 200px;
+    padding: 10px;
+}
+
+
+button[type='submit']{
+    display: block;
+    margin : 0em auto 1em auto;
+    padding: 10px;
+    background-color: transparent;
+    border: 2px solid var(--link-color);
+    border-radius: 7px;
+    font-size: 1.5em;
+    transition: 0.3s;
+}
+
+button[type="submit"]:hover{
+    background-color: white;
+}

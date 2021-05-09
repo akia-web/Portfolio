@@ -1,0 +1,11 @@
+{% extends 'admin/index.html.twig' %}
+
+{% block title %}Modifier une Categorie{% endblock %}
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{asset('css/ajout-article.css')}}">
+{% endblock %}
+
+{% block body %}
+<h1>Modifier la categorie</h1>
+{{ form(form) }}
+{% endblock %}

@@ -1,0 +1,13 @@
+{% extends 'main/index.html.twig' %}
+
+{% block title %}Contact{% endblock %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{asset('css/ajout-article.css')}}">
+{% endblock %}
+
+
+{% block body %}
+<h1>Prendre contact</h1>
+{{ form(form) }}
+{% endblock %}

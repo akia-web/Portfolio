@@ -1,0 +1,52 @@
+{% extends 'main/index.html.twig' %}
+
+{% block title %}Accueil{% endblock %}
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{asset('css/accueil.css')}}">
+{% endblock %}
+
+{% block body %}
+
+    <section class="haut">
+        <h1 class="Shadow-3">Charline Royer</h1>
+        <div class="container">
+            <span id="phrase1">Développeuse...web</span>
+        </div>
+    </section>
+    
+    <section class="container-annonce">
+
+    <p class="annonce"> <span class="tag">Passionnée</span> depuis un peu plus d'un an au développement web, je cherche toujours à <span class="tag">apprendre</span>. Je préfère le côté back car j'aime l'automatisation. Cependant j'aime aussi le front s'il y a une maquette. Il n'y a pas un seul jour où je ne regarde pas de vidéos pour <span class="tag">m'améliorer</span> dans mon code.
+    </p>
+  
+    <a class="bouton-lien" href=""> En savoir plus</a>
+    </section>
+
+
+
+
+<main>
+<section>
+    <div class="titre d-flex">
+        <img class="icones-cha"src="{{asset('uploads/images/web.svg')}}" alt="">
+        <h2>Projet Développement web</h2>
+    </div>
+   
+   <div class="super-container-projets">
+    {% for article in articles %}
+  
+    <div class="container-projets">
+        <img class="image-article" src="{{asset('uploads/images/' ~ article.images[0].name)}}" alt="">
+        <div class="container-infos-projets">
+            <h3><a target="_blank" href="{{article.liens}}">{{article.title}}</a></h3>
+            {{article.description|raw}}
+            <a class="bouton-lien" href="{{path('article', {slug: article.slug})}} ">Lire l'article</a>
+        </div>
+    </div>
+ 
+
+    {% endfor %}
+    </div>
+</section>
+        </main>
+        {% endblock %}

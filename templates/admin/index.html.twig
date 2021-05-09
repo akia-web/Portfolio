@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}{% endblock %}</title>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Oxanium&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap" rel="stylesheet">
+      
+        
+        <link rel="stylesheet" href="{{asset('css/axentis/axentix.min.css')}}">
+        <link rel="stylesheet" href="{{asset('css/style.css')}}">
+        {% block stylesheets %}{% endblock %}
+       
+
+        
+    </head>
+        <body class="layout with-sidenav fixed-sidenav">
+        <header>
+            <nav class="navbar shadow-1 black">
+                <a href="{{path('accueil')}}"><img class="logo-cha"src="{{asset('uploads/images/favicon.svg')}}"></a>
+                <div class="navbar-menu ml-auto">
+                <a class="navbar-link" href="#">Stage</a>
+                <a class="navbar-link" href="#">Autres Projets</a>
+                <a class="navbar-link" href="#">A propos</a>
+                <a class="navbar-link" href="#">Contact</a>
+                </div>
+            </nav>
+        </header>
+
+        <div id="example-sidenav" data-ax="sidenav" class="sidenav shadow-1 large fixed white">
+            <div class="sidenav-header">
+                <button data-target="example-sidenav" class="sidenav-trigger"><i class="fas fa-times"></i></button>
+               
+            </div>
+            <a href="{{ path('admin') }}" class="sidenav-link">Récap</a>
+            <a href="{{ path('admin_articles_ajout') }}" class="sidenav-link">Créer un nouvel article</a>
+            <a href="{{ path('categories_ajout') }}" class="sidenav-link">Créer une nouvelle catégorie</a>
+            <a href="{{ path('app_logout') }}" class="sidenav-link">Déconnexion</a>
+        </div>
+
+        <main>
+        <!-- Code here the main content -->
+    
+        {% block body %}{% endblock %}
+
+        </main>
+
+        <footer class="footer black">
+         <bouton data-target="example-sidenav" class="btn outline rounded-1 opening sidenav-trigger text-cha"><span class="outline-text">menu</span></bouton>
+        </footer>
+        
+        <script src="https://cdn.jsdelivr.net/npm/axentix@1.2.1/dist/js/axentix.min.js"></script>
+        {% block javascripts %}
+            <script>new Axentix('all');</script>
+        {% endblock %}
+    </body>
+</html>

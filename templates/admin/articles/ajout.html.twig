@@ -1,0 +1,30 @@
+{% extends 'admin/index.html.twig' %}
+
+{% block title %}Ajouter un article{% endblock %}
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{asset('css/ajout-article.css')}}">
+{% endblock %}
+{% block body %}
+
+{% if app.request.attributes.get('_route') == 'admin_articles_modif' %}
+<h1>Modifier un article</h1>
+ <h2>Images</h2>
+    {% for image in article.images %}
+        <div class="container-images">
+            <img src="{{asset('/uploads/images/'~ image.name)}}" alt="" height="100" width="100">
+            <a href="{{path('article_supprimer_images', {id: image.id})}} " data-delete data-token="{{csrf_token('delete' ~ image.id)}}">supprimer</a>
+        </div>
+    
+    {% endfor %}
+{% else %}
+<h1>Ajouter un article</h1>
+{% endif %}
+
+{{ form(form) }}
+
+
+{% endblock %}
+
+{% block javascripts %}
+<script src="{{asset('js/supprImage.js')}}"></script>
+{% endblock %}

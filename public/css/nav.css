@@ -1,0 +1,35 @@
+header{
+    background-color: black;
+    height: 10vh;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.text-cha{
+    color : white;
+    margin-right: 10px;
+}
+
+.text-cha:hover{
+    color: var(--link-color)
+}
+
+
+.logo-cha{
+    width: 60px;
+    margin-left: 10px;
+}
+
+.deco{
+    height: 50px;
+    background-color: black;
+}
+.sidenav-link:hover{
+    background-color: thistle !important;
+}
+
+.sidenav{
+    background-color: white;
+    color: var(--link-color)
+}

@@ -1,0 +1,76 @@
+{% extends 'admin/index.html.twig' %}
+
+{% block title %}Tableau de bord{% endblock %}
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{asset('css/recap.css')}}">
+{% endblock %}
+
+{% block body %}
+
+  <section class="haut">
+      {% for message in app.flashes('message') %}
+        <p>{{message}}</p>
+        {% endfor %}
+          
+
+                <p>Vous êtes connectez en tant que {{app.user.email}}</p>
+                <a href="{{ path('admin_edit_password')}}">Modifier le mot de passe</a>
+    </section>
+
+
+  
+    <div>
+    <h1>Nombre d'articles : ({{app.user.articles|length}})</h1>
+    </div>
+
+    <div class="responsive-table">
+        <table class="table striped">
+            <thead>
+            <tr>
+            {% if  is_granted('ROLE_ADMIN') %}
+            <th>ID</th>
+            {% endif %}
+                <th>Titre</th>
+                <th>Categorie</th>
+                <th>Actif</th>
+                {% if  is_granted('ROLE_ADMIN') %}
+                <th>Actions</th>
+                 {% endif %} 
+            </tr>
+            </thead>
+                <tbody>  
+                    {% for article in articles %}
+                        <tr>
+                            {% if  is_granted('ROLE_ADMIN') %}
+                            <td>{{article.id}}</td>
+                            {% endif %}
+                            <td>{{article.title}}</td>
+                            <td>{{article.categories}}</td>
+                            <td>
+                                {% if  is_granted('ROLE_EDITOR') %}
+                                    <label class="form-switch mt-2">
+                                    <input type="checkbox"{{(article.active)? 'checked':''}} data-id="{{article.id}}">
+                                    <span class="slider"></span>
+                                    </label>   
+                                {% endif %}                
+                            </td>
+                            <td>
+
+                                {% if  is_granted('ROLE_ADMIN') %}
+                                <a href ="{{ path('admin_articles_modif',  {id: article.id}) }}">Modifier</a> |
+                                <a href="{{ path('supprimer_article',  {id: article.id}) }}">Supprimer</button>
+                                {% endif %} 
+                            </td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+        </table>
+    </div>
+
+       
+
+{% endblock %}
+
+{% block javascripts %}
+    <script src="{{asset('js/active.js')}}"></script>
+{% endblock %}

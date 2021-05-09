@@ -1,0 +1,63 @@
+*{
+    margin: 0 ;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --link-color:#BB1159;
+    --bg : rgb(243, 234, 240);
+    --font-titre:'Goblin One', cursive;
+    --font-text: 'Oxygen', sans-serif;
+}
+main{
+    width: 90%;
+    margin: 0 auto;
+}
+
+.annonce{
+    text-align: justify;
+}
+h1, h2, h3, h4, h5{
+    font-family: var(--font-titre);
+}
+
+p, span {
+    font-family: var(--font-text);
+}
+body{
+    background-color: var(--bg)
+}
+
+
+
+.bouton-lien{
+    font-size: 2em;
+    padding: 10px;
+    display: block;
+    margin: 0 auto;
+    border: 2px solid black;
+    width: 230px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.bouton-lien:hover{
+    color: var(--link-color);
+    border-color: var(--link-color);
+    background-color: white;
+}
+
+a{
+    color: var(--link-color)
+}
+
+a:hover{
+    text-decoration: underline;
+}
+
+@media only screen and (min-width:1200px){
+    main{
+        width: 90%;
+    }
+}

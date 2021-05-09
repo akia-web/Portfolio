@@ -1,0 +1,50 @@
+{% extends 'admin/index.html.twig' %}
+
+{% block title %}Liste des utilisateurs{% endblock %}
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{asset('css/ajout-article.css')}}">
+{% endblock %}
+
+
+
+{% block body %}
+<h1>Liste des utilisateurs</h1>
+
+<h2>Liste des catégories</h2>
+<div class="responsive-table">
+        <table class="table striped">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Email</th>
+                    <th>Roles</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+            {% for user in users %}
+                <tr>
+                    <td>{{user.id}}</td>
+                    <td>{{user.email}}</td>
+                    <td>
+                    {% for role in user.roles %}
+                        {% if role == "ROLE_USER" %}
+                            Utilisateur 
+                        {% elseif role == "ROLE_ADMIN" %}
+                            Administrateur, 
+                        {% elseif role == "ROLE_EDITOR" %}
+                            Editeur, 
+                        {% endif %}
+                        
+                    {% endfor %}
+                    
+                    </td>
+                    <td>
+                        <a href="{{ path('admin_modifier_utilisateur', {id: user.id})}}">Modifier</a>
+                    
+                    </td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+{% endblock %}

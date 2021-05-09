@@ -1,0 +1,41 @@
+{% extends 'admin/index.html.twig' %}
+
+{% block title %}Ajouter une Categorie{% endblock %}
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{asset('css/ajout-article.css')}}">
+{% endblock %}
+
+
+
+{% block body %}
+<h1>Gerer les catégorie</h1>
+
+<h2>Liste des catégories</h2>
+<div class="responsive-table">
+        <table class="table striped">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nom</th>
+                    <th>Parent</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+            {% for categorie in categories %}
+                <tr>
+                    <td>{{categorie.id}}</td>
+                    <td>{{categorie.name}}</td>
+                    <td>{{categorie.parent}}</td>
+                    <td>
+                        <a href="{{ path('categories_modifier', {id: categorie.id})}}">Modifier</a>
+                    
+                    </td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+
+
+{{ form(form) }}
+{% endblock %}
