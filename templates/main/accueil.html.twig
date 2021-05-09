@@ -42,6 +42,37 @@
 
     {% endfor %}
     </div>
+
 </section>
+
+
+ <div class="popup" id="popup">
+    <h5>Site en construction!!</h5>
+    <p>Désolée du désagrément</p>
+    <p>Rendez-vous sur <a href="https://github.com/akia-web" target="_blank"> GitHub</a></p>
+    <p>Ou par mail : ch.royer15@gmail.com</p>
+
+    <p>Bonne visite! </p>
+
+    <button onclick="valider()">C'est compris</button>
+ 
+ </div>
         </main>
+        {% endblock %}
+
+        {% block javascripts %}
+        
+        <script>
+        
+        
+
+        function valider(){
+        let popup = document.getElementById('popup')
+        popup.classList.add('disparaitre')
+        }  
+           
+
+        </script>
+         
+
         {% endblock %}
