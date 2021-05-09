@@ -13,6 +13,7 @@
 main{
     width: 100%;
     margin: 0 auto;
+    padding-bottom: 30px;
 }
 
 .annonce{
@@ -28,6 +29,19 @@ p, span {
 body{
     background-color: var(--bg)
 }
+
+
+.footer-site{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 8vh;
+    background-color: black;
+    color: white;
+    width: 100%;
+}
+
+
 
 
 .bouton-lien{

@@ -6,25 +6,25 @@
 {% block body %}
 
   
+<main>
+    <section>
 
-<section>
-
-   
-   <div class="super-container-projets">
-    {% for article in articles %}
-  
-    <div class="container-projets">
-        <div class="container-infos-projets">
-           
-            {{article.content|raw}}
-           
+    
+    <div class="super-container-projets">
+        {% for article in articles %}
+    
+        <div class="container-projets">
+            <div class="container-infos-projets">
+            
+                {{article.content|raw}}
+            
+            </div>
         </div>
-    </div>
- 
+    
 
-    {% endfor %}
-    </div>
-</section>
+        {% endfor %}
+        </div>
+    </section>
 {% endblock %}
 
 
