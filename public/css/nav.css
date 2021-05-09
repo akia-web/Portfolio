@@ -9,21 +9,34 @@ header{
 .text-cha{
     color : white;
     margin-right: 10px;
+    font-size: 4em;
 }
 
+.sidenav .sidenav-header .sidenav-logo{
+    height: 100px;
+}
 .text-cha:hover{
     color: var(--link-color)
 }
 
 
 .logo-cha{
-    width: 60px;
+    width: 100px;
     margin-left: 10px;
 }
 
 .deco{
     height: 50px;
     background-color: black;
+}
+
+.sidenav{
+    width: 800px;
+}
+
+.sidenav .sidenav-link{
+    font-size: 2em;
+    padding: 20px;
 }
 .sidenav-link:hover{
     background-color: thistle !important;
@@ -32,4 +45,14 @@ header{
 .sidenav{
     background-color: white;
     color: var(--link-color)
+}
+
+@media only screen and (min-width:1200px){
+    .sidenav{
+        width: 20%;
+    }
+
+    .text-cha{
+        font-size:  2em;
+    }
 }

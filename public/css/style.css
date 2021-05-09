@@ -11,7 +11,7 @@
     --font-text: 'Oxygen', sans-serif;
 }
 main{
-    width: 90%;
+    width: 100%;
     margin: 0 auto;
 }
 
@@ -30,14 +30,13 @@ body{
 }
 
 
-
 .bouton-lien{
-    font-size: 2em;
-    padding: 10px;
+    font-size: 2.2em;
+    padding: 20px;
     display: block;
     margin: 0 auto;
     border: 2px solid black;
-    width: 230px;
+    width: 300px;
     text-align: center;
     transition: 0.3s;
 }
@@ -57,7 +56,5 @@ a:hover{
 }
 
 @media only screen and (min-width:1200px){
-    main{
-        width: 90%;
-    }
+
 }
