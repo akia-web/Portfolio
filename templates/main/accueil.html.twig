@@ -7,72 +7,64 @@
 
 {% block body %}
 
-<section class="haut">
-    <h1 class="Shadow-3">Charline Royer</h1>
-    <div class="container">
-        <span id="phrase1">Développeuse...web</span>
-    </div>
-</section>
-
-<section class="container-annonce">
-
-    <p class="annonce"> <span class="tag">Passionnée</span> depuis un peu plus d'un an au développement web, je cherche toujours à <span class="tag">apprendre</span>. Je préfère le côté back car j'aime l'automatisation. Cependant j'aime aussi le front s'il y a une maquette. Il n'y a pas un seul jour où je ne regarde pas de vidéos pour <span class="tag">m'améliorer</span> dans mon code.</p>
-    <a class="bouton-lien" href=""> En savoir plus</a>
-</section>
-
-
-<section>
-    <div class="titre d-flex">
-        <img class="icones-cha"src="{{asset('uploads/images/web.svg')}}" alt="">
-        <h2>Projet Développement web</h2>
-    </div>
-   
-   <div class="super-container-projets">
-    {% for article in articles %}
-  
-    <div class="container-projets">
-        <img class="image-article" src="{{asset('uploads/images/' ~ article.images[0].name)}}" alt="">
-        <div class="container-infos-projets">
-            <h3><a target="_blank" href="{{article.liens}}">{{article.title}}</a></h3>
-            {{article.description|raw}}
-            <a class="bouton-lien" href="{{path('article', {slug: article.slug})}} ">Lire l'article</a>
+    <section class="haut">
+        <h1 class="Shadow-3">Charline Royer</h1>
+        <div class="container">
+            <span id="phrase1">Développeuse...web</span>
         </div>
+    </section>
+
+    <section class="container-annonce">
+        <p class="annonce"> <span class="tag">Passionnée</span> depuis un peu plus d'un an au développement web, je cherche toujours à <span class="tag">apprendre</span>. Je préfère le côté back car j'aime l'automatisation. Cependant j'aime aussi le front s'il y a une maquette. Il n'y a pas un seul jour où je ne regarde pas de vidéos pour <span class="tag">m'améliorer</span> dans mon code.</p>
+        <a class="bouton-lien" href=""> En savoir plus</a>
+    </section>
+
+
+    <section>
+        <div class="titre d-flex">
+            <img class="icones-cha"src="{{asset('uploads/images/web.svg')}}" alt="">
+            <h2>Projet Développement web</h2>
+        </div>
+    
+    <div class="super-container-projets">
+        {% for article in articles %}
+    
+        <div class="container-projets">
+            <img class="image-article" src="{{asset('uploads/images/' ~ article.images[0].name)}}" alt="">
+            <div class="container-infos-projets">
+                <h3><a target="_blank" href="{{article.liens}}">{{article.title}}</a></h3>
+                {{article.description|raw}}
+                <a class="bouton-lien" href="{{path('article', {slug: article.slug})}} ">Lire l'article</a>
+            </div>
+        </div>
+    
+
+        {% endfor %}
+        </div>
+
+    </section>
+
+
+    <div class="popup" id="popup">
+        <h5>Site en construction!!</h5>
+        <p>Désolée du désagrément</p>
+        <p>Rendez-vous sur <a href="https://github.com/akia-web" target="_blank"> GitHub</a></p>
+        <p>Ou par mail : ch.royer15@gmail.com</p>
+
+        <p>Bonne visite! </p>
+
+        <button onclick="valider()">C'est compris</button>
+    
     </div>
  
+{% endblock %}
 
-    {% endfor %}
-    </div>
-
-</section>
-
-
- <div class="popup" id="popup">
-    <h5>Site en construction!!</h5>
-    <p>Désolée du désagrément</p>
-    <p>Rendez-vous sur <a href="https://github.com/akia-web" target="_blank"> GitHub</a></p>
-    <p>Ou par mail : ch.royer15@gmail.com</p>
-
-    <p>Bonne visite! </p>
-
-    <button onclick="valider()">C'est compris</button>
- 
- </div>
-        </main>
-        {% endblock %}
-
-        {% block javascripts %}
+{% block javascripts %}
         
-        <script>
-        
-        
-
+    <script>
         function valider(){
-        let popup = document.getElementById('popup')
-        popup.classList.add('disparaitre')
+            let popup = document.getElementById('popup')
+            popup.classList.add('disparaitre')
         }  
-           
-
-        </script>
-         
-
-        {% endblock %}
+    </script>
+ {% endblock %}
