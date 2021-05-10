@@ -29,6 +29,10 @@ h2{
     width: 98%; 
 }
 
+h4{
+    font-size: 3em;
+    margin-bottom: 1em;
+}
 h1{
     margin-top: 2em;
     font-size: 3em;
@@ -43,6 +47,20 @@ p{
 
 .avatar{
     width: 500px;
+}
+
+.image-article{
+    width: 99%;
+}
+.premiere{
+    margin-top: 1em;
+}
+.image-tel{
+    margin: 2em auto;
+    display: block;
+}
+ol, ul{
+    font-size: 2.3em;
 }
 
 
@@ -64,7 +82,22 @@ p{
     }
 
     h2{
-        font-size: 1.4em;
+        font-size: 1.8em;
         width: 100%;
     }
+
+    ol, ul{
+        font-size: 1.1em;
+        margin-left: 2em;
+    }
+
+    li{
+        padding-top: 0.5em;
+    }
+
+    h4{
+        font-size: 1.3em;
+    }
+
+    
 }

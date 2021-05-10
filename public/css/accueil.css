@@ -117,7 +117,16 @@
     color: var(--link-color);
     font-weight: 600;
 }
-
+.title{
+    font-size: 3.5em;
+    color :  #BB1159; 
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+    border: 2px solid black;
+    width: 90%;
+    margin: 1em auto;
+    padding: 20px 0 ;
+}
 .titre{
     justify-content: space-around;
     font-size: 0.6em;

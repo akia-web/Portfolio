@@ -1,19 +1,21 @@
 h1{
     text-align: center;
-    margin-top: 1em;
-    margin-bottom: 1em;
+    margin-top: 2em;
+    margin-bottom: 2em;
 }
 
 h2{
-    margin-bottom: 1em;
+    margin-bottom: 2em;
 }
-
+.contact{
+    min-height: 80vh;
+}
 .container-images{
     margin-bottom: 2em;
 }
-input[type='text']{
+input[type='text'], input[type='email'] {
     width: 100%;
-    padding: 10px;
+    padding: 2em 1em;
     margin-bottom: 2em;
 }
 
@@ -47,3 +49,6 @@ button[type='submit']{
 button[type="submit"]:hover{
     background-color: white;
 }
+
+
+@media only screen and (min-width:1200px){}
