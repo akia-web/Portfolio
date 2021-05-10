@@ -261,6 +261,7 @@ h3 a:hover{
     }
 
     .icones-techno{
+        width: 90px;
         display: block;
         margin: 0 auto;
     }

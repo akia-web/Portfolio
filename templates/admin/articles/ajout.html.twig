@@ -11,7 +11,7 @@
  <h2>Images</h2>
     {% for image in article.images %}
         <div class="container-images">
-            <img src="{{asset('/uploads/images/'~ image.name)}}" alt="" height="100" width="100">
+            <img src="{{asset('/uploads/images/annonces/'~ image.name)}}" alt="" height="100" width="100">
             <a href="{{path('article_supprimer_images', {id: image.id})}} " data-delete data-token="{{csrf_token('delete' ~ image.id)}}">supprimer</a>
         </div>
     
