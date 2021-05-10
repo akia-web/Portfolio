@@ -7,6 +7,10 @@ h1{
 h2{
     margin-bottom: 2em;
 }
+
+h3{
+    margin-bottom: 2em;
+}
 .contact{
     min-height: 80vh;
 }
@@ -34,6 +38,10 @@ select{
     padding: 10px;
 }
 
+textarea{
+    width: 100%;
+    height: 30vh;
+}
 
 button[type='submit']{
     display: block;
@@ -50,5 +58,23 @@ button[type="submit"]:hover{
     background-color: white;
 }
 
+.image-rs{
+    width: 30px;
+    margin-bottom: 2em;
+    margin-top: 2em;
+}
+.image-rs:hover{
+    fill: var(--link-color)
+}
 
-@media only screen and (min-width:1200px){}
+.current{
+    color: var(--link-color);
+    font-weight:  800;
+}
+
+
+@media only screen and (min-width:1200px){
+    input[type="text"], input[type='email']{
+        padding: 10px;
+    }
+}
