@@ -156,8 +156,8 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 80%;
-    margin: 0 auto 14em auto;
+    width: 90%;
+    margin: 0 auto 5em auto;
     text-align: center;
     
    
@@ -186,7 +186,7 @@ h3 a:hover{
     font-size: 1em;
     line-height: 2em;
     text-align: justify;
-    width: 70%;
+    width: 90%;
     margin: 0 auto 3em;
 }
 
