@@ -48,23 +48,23 @@
 }
 #phrase1 {
     -webkit-text-stroke: 0.1px black;
-    font-weight: 800;
     font-size: 70px;
     color : transparent;
     position : relative;
     padding-left: 0;
     padding-right: 0;
+    background-color: #ecccd9a8;
+    padding: 60px;
+    border-radius: 50px;
 }
 
 #phrase1::before{
     content: "Développeuse...web"; 
-    background-color: rgba(255, 255, 255, 0.507);
+    /* background-color: rgba(255, 255, 255, 0.507); */
+    
     position : absolute;
-    left: 0;
-    width: 110%;
-    height: 100%;
     overflow: hidden;
-    color : var(--link-color);
+    color: black;
     animation: text 6s 0.5s linear infinite;
 }
 
