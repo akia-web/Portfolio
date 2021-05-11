@@ -67,6 +67,19 @@ ol, ul{
     margin: 2em auto
 }
 
+.container-tableau{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.article-tableau{
+    margin-bottom: 2em;
+}
+
+
+
 
 @media only screen and (min-width:1200px){
     main{
@@ -102,6 +115,9 @@ ol, ul{
     h4{
         font-size: 1.3em;
     }
-
+   .container-tableau{
+       flex-direction: row;
+       justify-content: space-around;
+   }
     
 }
