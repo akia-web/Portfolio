@@ -69,9 +69,9 @@ a:hover{
     text-decoration: underline;
 }
 
-/* .popup{
+.popup{
     background-color: white;
-    font-size: 2em;
+    font-size: 1em;
     width: 70%;
     height: 40vh;
     line-height: 4em;
@@ -83,7 +83,7 @@ a:hover{
     transform:translate(-50%);
     animation: descendre 0.6s linear forwards; 
     z-index: 99;
-} */
+}
 
 @keyframes descendre{
     to{
