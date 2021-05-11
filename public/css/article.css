@@ -57,6 +57,7 @@ p{
 .premiere{
     margin-top: 1em;
     width: 250px;
+    max-width: 99%;
 }
 .image-tel{
     margin: 2em auto;
