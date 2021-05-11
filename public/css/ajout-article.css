@@ -19,7 +19,7 @@ h3{
 }
 input[type='text'], input[type='email'] {
     width: 100%;
-    padding: 2em 1em;
+    padding: 10px;
     margin-bottom: 2em;
 }
 
