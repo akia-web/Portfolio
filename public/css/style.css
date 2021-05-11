@@ -5,8 +5,8 @@
 }
 
 :root{
-    --link-color:#BB1159;
-    --bg : rgb(243, 234, 240);
+    --link-color:#a00e4c;
+    --bg : #f9f0f0;
     --font-titre:'Goblin One', cursive;
     --font-text: 'Oxygen', sans-serif;
 }
