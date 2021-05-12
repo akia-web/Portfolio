@@ -242,11 +242,13 @@ h3 a:hover{
         font-size: 1.2em;
     }
     .container-projets{
+        min-height: 50vh;
         align-items: center;
         flex-direction: row;
     }
 
    .container-projets:nth-child(even){
+       min-height: 50vh;
        flex-direction: row-reverse;
        align-items: center;
    }
