@@ -39,7 +39,7 @@ class ArticlesType extends AbstractType
 
             ->add('liens', TextType::class)
 
-            ->add('Valider', SubmitType::class)
+            ->add('Sauvegarder', SubmitType::class)
         ;
     }
 

@@ -6,21 +6,59 @@
 {% endblock %}
 {% block body %}
 
-{% if app.request.attributes.get('_route') == 'admin_articles_modif' %}
-<h1>Modifier un article</h1>
- <h2>Images</h2>
-    {% for image in article.images %}
-        <div class="container-images">
-            <img src="{{asset('/portfolio/public/uploads/images/annonces/'~ image.name)}}" alt="" height="100" width="100" >
-            <a href="{{path('article_supprimer_images', {id: image.id})}} " data-delete data-token="{{csrf_token('delete' ~ image.id)}}">supprimer</a>
-        </div>
-    
-    {% endfor %}
-{% else %}
-<h1>Ajouter un article</h1>
-{% endif %}
+  
+ 
 
-{{ form(form) }}
+
+
+
+ 
+    {% if app.request.attributes.get('_route') == 'admin_articles_modif' %}
+        <h1>Modifier l'article {{article.title}}</h1>
+    {% else %}
+        <h1>Ajouter un article</h1>
+    {% endif %}
+ {{ form_start(form) }} 
+    <div class="container-main-articles"> 
+        
+        <div class="container-gauche">
+            {{ form_widget(form.images)}}
+            {{form_label(form.content)}}
+            {{ form_widget(form.content)}}
+            {{form_label(form.description)}}
+            {{ form_widget(form.description)}}
+        </div>
+
+        
+            <div class="container-droit">
+                {% if app.request.attributes.get('_route') == 'admin_articles_modif' %}
+                    <a class="button-lien" target="_blank" href="{{path('article', {slug: article.slug})}} ">Voir l'article</a>
+                    <h3>Images</h3>
+                    {% for image in article.images %}
+                        <div class="container-images">
+                            <img src="{{asset('/portfolio/public/uploads/images/annonces/'~ image.name)}}" alt="" height="100" width="100" >
+                            <a href="{{path('article_supprimer_images', {id: image.id})}} " data-delete data-token="{{csrf_token('delete' ~ image.id)}}">supprimer</a>
+                        </div>
+                    {% endfor %}
+                    
+                {% endif %}
+                {{form_label(form.title)}}
+                {{ form_widget(form.title)}}
+                {{form_label(form.liens)}}
+                {{ form_widget(form.liens)}}
+                {{form_label(form.categories)}}
+                {{ form_widget(form.categories)}}
+                <div class="bouton-action">
+                    {{ form_widget(form.Sauvegarder)}}
+                    <a class="retour" href="{{path('admin')}}">retour</a>
+                </div>
+               
+
+               
+            </div>
+        
+    </div>
+     {{ form_end(form) }}
 
 
 {% endblock %}

@@ -114,7 +114,7 @@ class UsersController extends AbstractController
             $em->persist($article);
             $em->flush();
 
-            return $this->redirectToRoute('admin');
+            // return $this->redirectToRoute('admin');
         }
 
         return $this->render('admin/articles/ajout.html.twig', [
@@ -152,7 +152,7 @@ class UsersController extends AbstractController
             $em = $this->getDoctrine()->getManager();
             $em->persist($article);
             $em->flush();
-            return $this->redirectToRoute('admin');
+            // return $this->redirectToRoute('admin');
         }
 
         return $this->render('admin/articles/ajout.html.twig', [

@@ -43,9 +43,8 @@ textarea{
     height: 30vh;
 }
 
-button[type='submit']{
-    display: block;
-    margin : 0em auto 1em auto;
+button[type='submit'], .retour{
+    color: black;
     padding: 10px;
     background-color: transparent;
     border: 2px solid var(--link-color);
@@ -54,8 +53,10 @@ button[type='submit']{
     transition: 0.3s;
 }
 
-button[type="submit"]:hover{
+button[type="submit"]:hover, .retour:hover{
     background-color: white;
+    color: var(--link-color);
+    text-decoration: underline;
 }
 
 .image-rs{
@@ -71,10 +72,34 @@ button[type="submit"]:hover{
     color: var(--link-color);
     font-weight:  800;
 }
-
+.button-lien{
+    display: block;
+    text-align: end;
+    text-decoration: underline;
+}
 
 @media only screen and (min-width:1200px){
+    .container-main-articles{
+        display: flex;
+        justify-content: space-between;
+    }
+    .container-gauche{
+        width: 75%;
+    }
+
+    .container-droit{
+        background-color: white;
+        width: 20%;
+        padding: 10px;
+    }
+
+
     input[type="text"], input[type='email']{
         padding: 10px;
+    }
+    .bouton-action{
+        margin-top: 2em;
+        display: flex;
+        justify-content: space-between;
     }
 }
