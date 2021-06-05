@@ -22,7 +22,7 @@
     <div class="container-main-articles"> 
         
         <div class="container-gauche">
-            {{ form_widget(form.images)}}
+           
             {{form_label(form.content)}}
             {{ form_widget(form.content)}}
             {{form_label(form.description)}}
@@ -46,6 +46,7 @@
                 {{ form_widget(form.title)}}
                 {{form_label(form.liens)}}
                 {{ form_widget(form.liens)}}
+                 {{ form_widget(form.images)}} <br>
                 {{form_label(form.categories)}}
                 {{ form_widget(form.categories)}}
                 <div class="bouton-action">
