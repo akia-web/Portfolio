@@ -18,7 +18,7 @@
     {% for article in articles %}
   
     <div class="container-projets">
-        <img class="image-article" src="{{asset('uploads/images/annonces/' ~ article.images[0].name)}}" alt="" width="50">
+        <img src="{{asset('uploads/images/annonces/' ~ article.images[0].name)}}" alt="" width="50">
         <div class="container-infos-projets">
             <h3>{{article.title}}</h3>
             {{article.description|raw}}
