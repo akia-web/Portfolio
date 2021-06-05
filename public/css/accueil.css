@@ -149,7 +149,7 @@ scroll-behavior: smooth;
     margin-top: 4em;
 }
 
-.image-article{
+.image-article, .image-article-stage{
     width: 100%;
     display: block;
     margin : 0 auto
@@ -272,6 +272,10 @@ h3 a:hover{
     }
     .image-article{
         width: 700px;
+    }
+
+    .image-article-stage{
+        width: 50%;
     }
 
     .container-infos-projets h3, .container-infos-projets-stage h3{
