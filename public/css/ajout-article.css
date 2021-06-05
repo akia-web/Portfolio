@@ -89,7 +89,7 @@ button[type="submit"]:hover, .retour:hover{
 
     .container-droit{
         background-color: white;
-        width: 24%;
+        width: 23%;
         padding: 10px;
         display: flex;
         flex-direction: column;
