@@ -155,7 +155,7 @@ scroll-behavior: smooth;
     margin : 0 auto
 }
 
-.container-projets{
+.container-projets, .container-projets-stage{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -245,11 +245,19 @@ h3 a:hover{
     h3 a{
         font-size: 1.2em;
     }
-    .container-projets{
+    .container-projets, .container-projets-stage{
         min-height: 80vh;
         justify-content: center;
         align-items: center;
         flex-direction: row;
+       
+    }
+
+    .container-projets-stage{
+      
+        /* background-color: red; */
+        width: 50%;
+       
     }
 
    .container-projets:nth-child(even){
