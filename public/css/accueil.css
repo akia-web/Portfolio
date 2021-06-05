@@ -204,7 +204,11 @@ h3 a:hover{
 }
 
 
-
+@media only screen and (min-width:1000px){
+    .container-annonce{
+        margin: 6em auto 6em auto;
+    }
+}
 
 @media only screen and (min-width:1200px){
     .haut h1{
