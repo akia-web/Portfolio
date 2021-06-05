@@ -18,8 +18,8 @@
     {% for article in articles %}
   
     <div class="container-projets">
-        <img src="{{asset('uploads/images/annonces/' ~ article.images[0].name)}}" alt="" width="200">
-        <div class="container-infos-projets">
+        <img src="{{asset('uploads/images/annonces/' ~ article.images[0].name)}}" alt="" width="200" height="200">
+        <div class="container-infos-projets-stage">
             <h3>{{article.title}}</h3>
             {{article.description|raw}}
             <a class="bouton-lien" href="{{path('article', {slug: article.slug})}} ">Lire l'article</a>

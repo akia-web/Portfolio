@@ -247,6 +247,7 @@ h3 a:hover{
     }
     .container-projets{
         min-height: 80vh;
+        justify-content: center;
         align-items: center;
         flex-direction: row;
     }
@@ -260,12 +261,14 @@ h3 a:hover{
     .container-infos-projets{
         width: 80%;
     }
-
+    .container-infos-projets-stage{
+        width: 50%;
+    }
     .image-article{
         width: 700px;
     }
 
-    .container-infos-projets h3{
+    .container-infos-projets h3, .container-infos-projets-stage h3{
         text-align: center;
         margin-top: 0;
     }
