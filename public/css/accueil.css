@@ -155,12 +155,10 @@ scroll-behavior: smooth;
     margin : 0 auto
 }
 
-.container-projets, .container-projets-stage{
+.projets, .container-projets-stage{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 90%;
-    margin: 0 auto 5em auto;
     text-align: center;
     
    
@@ -174,6 +172,7 @@ h3 a{
     padding-top: 1em;
     text-decoration: underline var(--link-color);
     transition: 0.5s;
+    text-align: center;
 }
 
 h3 a:hover{
@@ -245,14 +244,31 @@ h3 a:hover{
     h3 a{
         font-size: 1.2em;
     }
-    .container-projets, .container-projets-stage{
+
+    .super-container-projets{
+        display: grid;
         min-height: 80vh;
-        justify-content: center;
-        align-items: center;
-        flex-direction: row;
+        width: 80%;
+        margin: 2em auto;
+        grid-template-columns: repeat(3, 1fr); 
+        grid-gap: 2em;  
+    }
+    .container-projets, .container-projets-stage{
+        display: grid;
+        min-height: 80vh;
+        grid-template-columns: repeat(3, 1fr);
+       
        
     }
 
+    .projets{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+   
     .container-projets-stage{
         width: 60%;
        
@@ -271,18 +287,26 @@ h3 a:hover{
         width: 50%;
     }
     .image-article{
-        width: 700px;
+        width: 500px;
+        height: 300px;
+        object-fit: contain; 
+      
+        
     }
+
+  
+    
 
     .image-article-stage{
         width: 500px;
     }
 
-    .container-infos-projets h3, .container-infos-projets-stage h3{
+    .projets h3, .container-infos-projets-stage h3{
         text-align: center;
         margin-top: 0;
     }
 
+   
     .container-projets h4{
        text-align: center;
        font-size: 1.5em;

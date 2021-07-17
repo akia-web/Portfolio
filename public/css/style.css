@@ -45,14 +45,12 @@ body{
 
 
 .bouton-lien{
-    font-size: 2.2em;
-    padding: 20px;
+    font-size: 1.2em;
+    padding: 10px;
     display: block;
-    margin: 0 auto;
-    border: 2px solid black;
-    width: 300px;
-    text-align: center;
+    margin: 1em auto;   
     transition: 0.3s;
+    border: 1px dotted black
 }
 
 .bouton-lien:hover{
