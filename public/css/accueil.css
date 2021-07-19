@@ -250,13 +250,13 @@ h3 a:hover{
         min-height: 80vh;
         width: 80%;
         margin: 2em auto;
-        grid-template-columns: repeat(3, 1fr); 
+        grid-template-columns: repeat(2, 1fr); 
         grid-gap: 2em;  
     }
     .container-projets, .container-projets-stage{
         display: grid;
         min-height: 80vh;
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(3, 1fr);
        
        
     }
