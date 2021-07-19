@@ -49,6 +49,9 @@ scroll-behavior: smooth;
     font-size: 1em;
    animation: titre 0.5s linear;
 }
+.titre-page{
+    padding: 1em 0 1em 1em;
+}
 #phrase1 {
     font-size: 0.7em;
     color : transparent;
