@@ -23,7 +23,9 @@ main{
 h1, h2, h3, h4, h5{
     font-family: var(--font-titre);
 }
-
+.titre-page{
+    padding: 1em 0 1em 1em;
+}
 p, span {
     font-family: var(--font-text);
 }
