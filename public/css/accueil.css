@@ -256,7 +256,7 @@ h3 a:hover{
     .container-projets, .container-projets-stage{
         display: grid;
         min-height: 80vh;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(2, 1fr);
        
        
     }
@@ -327,5 +327,11 @@ h3 a:hover{
 }
 
 
-
+@media only screen and (min-width:1500px){
+    .container-projets, .container-projets-stage{
+        grid-template-columns: repeat(3, 1fr);
+       
+       
+    }
+}
 
