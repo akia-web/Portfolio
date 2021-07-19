@@ -189,6 +189,7 @@ h3 a:hover{
 .container-projets h3{
     font-size: 1em;
     margin-bottom: 1em;
+    margin-top: 2em;
 }
 
 .container-projets p{
@@ -342,6 +343,7 @@ h3 a:hover{
     }
     .container-projets h3{
         font-size: 2em;
+        margin-top: 0;
     }
 }
 
