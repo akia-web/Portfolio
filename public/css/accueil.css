@@ -281,8 +281,11 @@ h3 a:hover{
    }
 
     .container-infos-projets{
-        width: 80%;
+        width: 700px;
+        margin-left: 4em;
     }
+
+
     .container-infos-projets-stage{
         width: 50%;
     }
