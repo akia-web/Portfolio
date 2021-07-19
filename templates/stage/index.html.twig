@@ -20,7 +20,7 @@
     <div class="container-projets">
         <img class="image-article-stage" src="{{asset('uploads/images/annonces/' ~ article.images[0].name)}}" alt="">
         <div class="container-infos-projets">
-            <h3>{{article.title}}</h3>
+            <h3 class="titre-h3-stage">{{article.title}}</h3>
             {{article.description|raw}}
             <a class="bouton-lien" href="{{path('article', {slug: article.slug})}} ">Lire l'article</a>
         </div>

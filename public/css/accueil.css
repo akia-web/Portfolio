@@ -54,6 +54,11 @@ scroll-behavior: smooth;
     font-size: 1em;
     text-align: center;
 }
+
+.titre-h3-stage{
+    font-size: 1em;
+    padding-top: 2em;
+}
 #phrase1 {
     font-size: 0.7em;
     color : transparent;
@@ -212,6 +217,16 @@ h3 a:hover{
 
 @media only screen and (min-width:1200px){
     .haut h1{
+        font-size: 2em;
+    }
+
+    .titre-page{
+        font-size: 2em;
+        text-align: left;
+    }
+
+    .titre-h3-stage{
+        padding-top: 0;
         font-size: 2em;
     }
 
