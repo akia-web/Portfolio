@@ -50,7 +50,9 @@ scroll-behavior: smooth;
    animation: titre 0.5s linear;
 }
 .titre-page{
-    padding: 1em 0 1em 1em;
+    padding: 4em 0 1em 1em;
+    font-size: 1em;
+    text-align: center;
 }
 #phrase1 {
     font-size: 0.7em;
